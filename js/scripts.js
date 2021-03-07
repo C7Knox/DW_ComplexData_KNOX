@@ -13,9 +13,9 @@ function Qoute(qouteTxt, author, tags, color) {
         var container = $("<div>")
         this.tags.forEach(function(tag){
             container.addClass(tag);
-            $(".buttons").prepend("<button>" + tag + "</button>")
         })
         container.css("background", this.color)
+        container.addClass("qoute")
         
         var qouteString = "";
         qouteString += "<p>" + this.qoute + "</p>";
@@ -27,11 +27,43 @@ function Qoute(qouteTxt, author, tags, color) {
 
 var qoutes = [
     new Qoute('"We don\'t make mistakes, just happy little accidents."', "Bob Ross", ["painting", "mistakes"], "#0a3410"),
-    new Qoute('"Creativity takes courage"', "Henry Matisse", ["painting", "creativity"], "lightblue")
-    ]
+    new Qoute('"Creativity takes courage"', "Henry Matisse", ["painting", "creativity"], "lightblue"),
+    new Qoute('"We the People"', "Michael Bay Scott", ["riot"], "orange" )
+]
 
+//global taglist
+var tagList = []
 qoutes.forEach(function(qoute){
     qoute.display();
+    qoute.tags.forEach(function(tag){
+        //check if tags been added to taglist
+        if(!tagList.includes(tag)) {
+            //if not(!) added, add it
+            tagList.push(tag);
+            //makes a button for it
+            $(".buttons").prepend("<button class='filter' id='" + tag +"'>" + tag + "</button>");
+        }
+    })
 })
-//qoute1.display();
-//qoute2.display();
+console.log(tagList);
+
+$(".filter").on("click", function() {
+    var tag = $(this).attr("id");
+    console.log(tag);
+    $("." + tag).fadeIn();
+    $(".qoute").not("." + tag).hide();
+    
+    //removes class active to reset buttons to default
+    $(".filter").removeClass("active");
+    //adds active class so buttons turn pink when clicked
+    $(this).addClass("active");
+})
+//tagList.forEach(function(tag) {
+//    $(".buttons").prepend("<button>" + tag + "</button>")
+//}) cleaner to put it above with the tagList push
+
+
+
+
+
+

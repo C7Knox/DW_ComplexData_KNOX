@@ -11,12 +11,14 @@ img {
     max-width: 100%;
 }
 
-body {
+.qoutes {
     color: white;
+    display: flex;
 }
 
-div {
+div > div {
     width: 250px;
     height: 250px;
     padding: 20px;
+/*    margin: 10px;*/
 }

@@ -3,34 +3,35 @@
 //    '"Creativity takes courage" - Henry Matisse'
 //]
 
-var qoute1 = {
-    qoute: '"We don\'t make mistakes, just happy little accidents."',
-    author: "Bob Ross",
-    tags: ["painting", "mistakes"],
-    color: "#0a3410",
-    display: function() {
+function Qoute(qouteTxt, author, tags, color) {
+    this.qoute = qouteTxt;
+    this.author = author;
+    this.tags = tags;
+    this.color = color;
+    this.display = function() {
+        
+        var container = $("<div>")
+        this.tags.forEach(function(tag){
+            container.addClass(tag);
+            $(".buttons").prepend("<button>" + tag + "</button>")
+        })
+        container.css("background", this.color)
+        
         var qouteString = "";
-    qouteString += "<div style='background:" + this.color + "'>";
-    qouteString += "<p>" + this.qoute + "</p>";
-    qouteString += "<cite>" + this.author + "</cite>";
-    qouteString += "</div>";
-    $("body").prepend(qouteString)
+        qouteString += "<p>" + this.qoute + "</p>";
+        qouteString += "<cite>" + this.author + "</cite>";
+        container.html(qouteString)
+        $(".qoutes").prepend(container)
     }
 }
 
-qoute1.display();
+var qoutes = [
+    new Qoute('"We don\'t make mistakes, just happy little accidents."', "Bob Ross", ["painting", "mistakes"], "#0a3410"),
+    new Qoute('"Creativity takes courage"', "Henry Matisse", ["painting", "creativity"], "lightblue")
+    ]
 
-
-
-console.log(qoute1.qoute); 
-
-//var qouteString = "";
-//qoutes.forEach(function(qoute){
-//    
-//    
-//    qouteString += "<p>" + qoute + "</p>"
-//    
-//    console.log(qouteString);
-//});
-//
-//$("body").html(qouteString);
+qoutes.forEach(function(qoute){
+    qoute.display();
+})
+//qoute1.display();
+//qoute2.display();

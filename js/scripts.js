@@ -5,6 +5,7 @@
 
 function Qoute(qouteTxt, author, tags, color) {
     this.qoute = qouteTxt;
+//    this.title = title;
     this.author = author;
     this.tags = tags;
     this.color = color;
@@ -18,17 +19,25 @@ function Qoute(qouteTxt, author, tags, color) {
         container.addClass("qoute")
         
         var qouteString = "";
-        qouteString += "<p>" + this.qoute + "</p>";
-        qouteString += "<cite>" + this.author + "</cite>";
+        qouteString += "<img src=" + this.qoute + ">";
+//        qouteString += "<p>" + this.title + "</p>";
+        qouteString += "<p>" + this.author + "</p>";
         container.html(qouteString)
         $(".qoutes").prepend(container)
     }
 }
 
 var qoutes = [
-    new Qoute('"We don\'t make mistakes, just happy little accidents."', "Bob Ross", ["painting", "mistakes"], "#0a3410"),
-    new Qoute('"Creativity takes courage"', "Henry Matisse", ["painting", "creativity"], "lightblue"),
-    new Qoute('"We the People"', "Michael Bay Scott", ["riot"], "orange" )
+    new Qoute('imgs/pickled_film.jfif', "Pickled Film", ["MixedMedia", "Tony-Conrad", "All"], "orange" ),
+    new Qoute('imgs/RetroSpective.jfif', '"Retrospective"', ["Sculpture", "Tony-Conrad", "All"], "orange" ),
+    new Qoute('imgs/Necronom.jfif', "Necronom IV", ["ConceptArt", "Giger", "All"], "orange" ),
+    new Qoute('imgs/Necronom_2.jfif', "Necronom Piece", ["ConceptArt", "Giger", "All"], "orange" ),
+    new Qoute('imgs/giger.jfif', "Necronom Piece", ["ConceptArt", "Giger", "All"], "orange" ),
+    new Qoute('imgs/Dude_This_yours.jfif', "Dude is this yours, I think you\'ve dropped it back over there", ["ConceptArt", "Tomislav-Jagnjic", "All"], "orange" ),
+    new Qoute('imgs/hey_Psst.jfif', "Hey psst, wanna buy some cubes", ["ConceptArt", "Tomislav-Jagnjic", "All"], "orange" ),
+    new Qoute('imgs/omelette.jfif', "Oh man, this is going to be the best omelette ever!", ["ConceptArt", "Tomislav-Jagnjic", "All"], "orange" ),
+    new Qoute('imgs/YoBro.jfif', "Yo bro is it safe down there in the woods? Yeah man it\s cool", ["ConceptArt", "Tomislav-Jagnjic", "All"], "orange" ),
+    new Qoute('imgs/hes_not_here.jfif', "I told you he\'s not here, why would he hide behind our hut", ["ConceptArt", "Tomislav-Jagnjic", "All"], "orange" ),
 ]
 
 //global taglist
@@ -58,6 +67,8 @@ $(".filter").on("click", function() {
     //adds active class so buttons turn pink when clicked
     $(this).addClass("active");
 })
+
+console.log("Credit of art goes to Tony Conrad, H.R.Giger, and Tomislav Jagnjic https://www.artstation.com/tomislav");
 //tagList.forEach(function(tag) {
 //    $(".buttons").prepend("<button>" + tag + "</button>")
 //}) cleaner to put it above with the tagList push

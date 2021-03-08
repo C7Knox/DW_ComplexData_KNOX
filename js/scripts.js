@@ -28,16 +28,16 @@ function Qoute(qouteTxt, author, tags, color) {
 }
 
 var qoutes = [
-    new Qoute('imgs/pickled_film.jfif', "Pickled Film", ["MixedMedia", "Tony-Conrad", "All"], "orange" ),
-    new Qoute('imgs/RetroSpective.jfif', '"Retrospective"', ["Sculpture", "Tony-Conrad", "All"], "orange" ),
-    new Qoute('imgs/Necronom.jfif', "Necronom IV", ["ConceptArt", "Giger", "All"], "orange" ),
-    new Qoute('imgs/Necronom_2.jfif', "Necronom Piece", ["ConceptArt", "Giger", "All"], "orange" ),
-    new Qoute('imgs/giger.jfif', "Necronom Piece", ["ConceptArt", "Giger", "All"], "orange" ),
-    new Qoute('imgs/Dude_This_yours.jfif', "Dude is this yours, I think you\'ve dropped it back over there", ["ConceptArt", "Tomislav-Jagnjic", "All"], "orange" ),
-    new Qoute('imgs/hey_Psst.jfif', "Hey psst, wanna buy some cubes", ["ConceptArt", "Tomislav-Jagnjic", "All"], "orange" ),
-    new Qoute('imgs/omelette.jfif', "Oh man, this is going to be the best omelette ever!", ["ConceptArt", "Tomislav-Jagnjic", "All"], "orange" ),
-    new Qoute('imgs/YoBro.jfif', "Yo bro is it safe down there in the woods? Yeah man it\s cool", ["ConceptArt", "Tomislav-Jagnjic", "All"], "orange" ),
-    new Qoute('imgs/hes_not_here.jfif', "I told you he\'s not here, why would he hide behind our hut", ["ConceptArt", "Tomislav-Jagnjic", "All"], "orange" ),
+    new Qoute('imgs/pickled_film.jfif', "Pickled Film", ["All", "MixedMedia", "Tony-Conrad"], "#7D938A" ),
+    new Qoute('imgs/RetroSpective.jfif', '"Retrospective"', ["Sculpture", "Tony-Conrad", "All"], "#40916C" ),
+    new Qoute('imgs/Necronom.jfif', "Necronom IV", ["ConceptArt", "Giger", "All"], "#52B788" ),
+    new Qoute('imgs/Necronom_2.jfif', "Necronom Piece", ["ConceptArt", "Giger", "All"], "#74C69D" ),
+    new Qoute('imgs/giger.jfif', "Necronom Piece", ["ConceptArt", "Giger", "All"], "#C27085" ),
+    new Qoute('imgs/Dude_This_yours.jfif', "Dude is this yours, I think you\'ve dropped it back over there", ["ConceptArt", "Tomislav-Jagnjic", "All"], "#FFADAF" ),
+    new Qoute('imgs/hey_Psst.jfif', "Hey psst, wanna buy some cubes", ["ConceptArt", "Tomislav-Jagnjic", "All"], "#EFD2D7" ),
+    new Qoute('imgs/omelette.jfif', "Oh man, this is going to be the best omelette ever!", ["ConceptArt", "Tomislav-Jagnjic", "All"], "#16697A" ),
+    new Qoute('imgs/YoBro.jfif', "Yo bro is it safe down there in the woods? Yeah man it\s cool", ["ConceptArt", "Tomislav-Jagnjic", "All"], "#489FB5" ),
+    new Qoute('imgs/hes_not_here.jfif', "I told you he\'s not here, why would he hide behind our hut", ["ConceptArt", "Tomislav-Jagnjic", "All"], "#82c0cc" ),
 ]
 
 //global taglist
@@ -69,6 +69,7 @@ $(".filter").on("click", function() {
 })
 
 console.log("Credit of art goes to Tony Conrad, H.R.Giger, and Tomislav Jagnjic https://www.artstation.com/tomislav");
+
 //tagList.forEach(function(tag) {
 //    $(".buttons").prepend("<button>" + tag + "</button>")
 //}) cleaner to put it above with the tagList push

@@ -29,7 +29,7 @@ function Qoute(qouteTxt, author, tags, color) {
 
 var qoutes = [
     new Qoute('imgs/pickled_film.jfif', "Pickled Film", ["All", "MixedMedia", "Tony-Conrad"], "#7D938A" ),
-    new Qoute('imgs/Retrospective.jfif', '"Retrospective"', ["Sculpture", "Tony-Conrad", "All"], "#40916C" ),
+    new Qoute('imgs/retrospec.jfif', "Retrospective", ["Sculpture", "Tony-Conrad", "All"], "#40916C" ),
     new Qoute('imgs/Necronom.jfif', "Necronom IV", ["ConceptArt", "Giger", "All"], "#52B788" ),
     new Qoute('imgs/Necronom_2.jfif', "Necronom Piece", ["ConceptArt", "Giger", "All"], "#74C69D" ),
     new Qoute('imgs/giger.jfif', "Necronom Piece", ["ConceptArt", "Giger", "All"], "#C27085" ),
